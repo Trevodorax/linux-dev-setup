@@ -1,0 +1,1 @@
+# sets up the complete env for android development
