@@ -14,4 +14,6 @@ chmod 600 ~/.ssh/authorized_keys
 
 zip -r ~/ssh-keys.zip "$KEY_DIR"
 
+rm -rf "$KEY_DIR/*"
+
 cd -
