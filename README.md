@@ -14,7 +14,12 @@ For the config, set it up with these
 - Password: Modo@1234
 - Server Name: linux-dev-final-vm
 
-Copy this complete folder to the machine.
+Copy this complete folder to the machine (you can get it at https://github.com/Trevodorax/linux-dev-setup.git)
+
+```sh
+git clone https://github.com/Trevodorax/linux-dev-setup.git
+cd linux-dev-setup
+```
 
 From the root of the folder, and with the created user, run the following commands **in order**.
 
