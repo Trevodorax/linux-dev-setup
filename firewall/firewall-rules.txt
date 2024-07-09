@@ -1,0 +1,13 @@
+# firewall-rules.txt
+
+# Bloquer toutes les connexions entrantes par défaut
+sudo ufw default deny incoming
+# Justification : Cette règle empêche toute connexion non autorisée, augmentant ainsi la sécurité du système.
+
+# Autoriser toutes les connexions sortantes par défaut
+sudo ufw default allow outgoing
+# Justification : Permet à toutes les applications de communiquer librement avec des services externes, garantissant le bon fonctionnement des services nécessaires.
+
+# Activer le pare-feu avec les règles définies
+sudo ufw enable
+# Justification : Applique les règles de pare-feu configurées pour assurer la sécurité du système.
