@@ -5,5 +5,3 @@ services:
     # cockpit app
   nginx-web-server:
     # server that serves the php app
-  sftp-server:
-    # server that will allow us to use sftp on the machine
