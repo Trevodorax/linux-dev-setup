@@ -12,4 +12,4 @@ cp .zshrc ~/.zshrc
 
 source ~/.zshrc
 
-cd -
+cd ~/linux-dev-setup
