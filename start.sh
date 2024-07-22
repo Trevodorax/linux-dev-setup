@@ -9,11 +9,11 @@ chmod +x ./services/php-web-app/cockpit.sh
 chmod +x ./services/docker.sh
 chmod +x ./android-env/setup-android-env.sh
 
-sudo ./init/initial-setup.sh
+./init/initial-setup.sh
 
-sudo ./zsh/setup-zsh.sh
+./zsh/setup-zsh.sh
 
-sudo ./ssh/setup-ssh.sh
+./ssh/setup-ssh.sh
 
 sudo ./sftp-server/setup-firewall.sh
 
@@ -23,7 +23,7 @@ sudo ./services/php-web-app/cockpit.sh
 
 sudo ./services/docker.sh
 
-sudo ./android-env/setup-android-env.sh
+./android-env/setup-android-env.sh
 
 sudo docker-compose up --build -d
 
