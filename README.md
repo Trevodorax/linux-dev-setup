@@ -40,10 +40,9 @@ Make sure the right users can access the machine remotely
 ssh/setup-ssh.sh
 ```
 
-Provide the tools for android development to the user (the second command should display "OK")
+Provide the tools for android development to the user
 ```sh
 android-env/setup-android-env.sh
-android-env/test-android-env.sh
 ```
 
 Start all the services we need on the machine
