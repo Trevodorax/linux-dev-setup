@@ -1,7 +1,44 @@
+version: '3.8'
+
 services:
   weekly-news-postgres-db:
-    # postgres db
-  php-web-app:
-    # cockpit app
-  nginx-web-server:
-    # server that serves the php app
+    container_name: postgres
+    build: ./services/weekly-news-postgres-db
+    restart: always
+    environment:
+      POSTGRES_DB: "weekly-news"
+      POSTGRES_USER: "weekly"
+      POSTGRES_PASSWORD: "AjE7ruewhrvYQ7avwbWqPoAB"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d weekly-news"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: mypgadminpass
+      PGADMIN_LISTEN_PORT: 5050
+    healthcheck:
+      test: ["CMD", "wget", "-O", "-", "http://localhost:5050/misc/ping"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    ports:
+      - "5050:5050"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      weekly-news-postgres-db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  pgadmin_data:
