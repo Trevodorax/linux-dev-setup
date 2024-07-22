@@ -1,5 +1,12 @@
 #!/bin/bash
 
+chmod +x ./init/initial-setup.sh
+chmod +x ./zsh/setup-zsh.sh
+chmod +x ./ssh/setup-ssh.sh
+chmod +x ./sftp-server/setup-firewall.sh
+chmod +x ./services/docker.sh
+chmod +x ./android-env/setup-android-env.sh
+
 sudo ./init/initial-setup.sh
 
 sudo ./zsh/setup-zsh.sh
