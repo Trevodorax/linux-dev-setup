@@ -4,6 +4,8 @@ chmod +x ./init/initial-setup.sh
 chmod +x ./zsh/setup-zsh.sh
 chmod +x ./ssh/setup-ssh.sh
 chmod +x ./sftp-server/setup-firewall.sh
+chmod +x ./sftp-server/setup-sftp.sh
+chmod +x ./services/php-web-app/cockpit.sh
 chmod +x ./services/docker.sh
 chmod +x ./android-env/setup-android-env.sh
 
