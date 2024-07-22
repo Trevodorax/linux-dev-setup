@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Installation de docker."
 sudo apt-get install -y ca-certificates curl && apt-get clean
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
@@ -18,4 +17,3 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.28.1/docker-compose-linux-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-echo "Installation de docker terminée."
